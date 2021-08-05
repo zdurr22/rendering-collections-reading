@@ -14,7 +14,11 @@ see how Rails can abstract this into a nicer syntax.
 
 ## Lesson
 
-Make sure you run `rake db:seed` before you test out the app in your browser. Because this lesson focuses on using the `collection` keyword with partials, we've hard-coded in the connection between authors and posts. In the posts controller create action, we link the newly created post with the first author in the database.
+Make sure you run `rake db:seed` before you test out the app in your browser.
+Because this lesson focuses on using the `collection` keyword with partials,
+we've hard-coded in the connection between authors and posts. In the posts
+controller create action, we link the newly created post with the first author
+in the database.
 
 Currently, our `posts#index` view is manually rendering the partial in a loop.
 
@@ -24,14 +28,16 @@ Currently, our `posts#index` view is manually rendering the partial in a loop.
 <% end %>
 ```
 
-Rails offers a great way to render a collection using a partial by passing the collection option to the render method.
+Rails offers a great way to render a collection using a partial by passing the
+collection option to the render method.
 
 ```erb
 <%= render :partial => "post", :collection => @posts %>
 ```
 
-Our code is tighter and both more abstract and more clear.
-Another even more abstract method Rails gives us to do this is passing an array directly to the render method.
+Our code is tighter and both more abstract and more clear. Another even more
+abstract method Rails gives us to do this is passing an array directly to the
+render method.
 
 ```erb
 <%= render @posts %>
@@ -60,7 +66,3 @@ wrap that collection_.
 
 As always, Rails has tried to abstract commonly used functionality into more
 terse and implicit code. Experiment with these tricks in the upcoming lab.
-
-## Video Review
-
-- [Partials and Collections](https://www.youtube.com/watch?v=XpthyOc767U)
