@@ -14,11 +14,11 @@ see how Rails can abstract this into a nicer syntax.
 
 ## Lesson
 
-Make sure you run `rake db:seed` before you test out the app in your browser.
-Because this lesson focuses on using the `collection` keyword with partials,
-we've hard-coded in the connection between authors and posts. In the posts
-controller create action, we link the newly created post with the first author
-in the database.
+Make sure you run `rake db:migrate` and `rake db:seed` before you test out the
+app in your browser. Because this lesson focuses on using the `collection`
+keyword with partials, we've hard-coded in the connection between authors and
+posts. In the posts controller create action, we link the newly created post
+with the first author in the database.
 
 Currently, our `posts#index` view is manually rendering the partial in a loop.
 
